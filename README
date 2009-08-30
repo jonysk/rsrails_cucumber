@@ -1,0 +1,16 @@
+Projeto simples demonstrando o uso de Cucumber e Webrat num procedimento de login de uma aplicação Rails.
+
+Parte da palestra ministrada no RS Rails 2009: http://www.slideshare.net/jonysk/behaviourdriven-development-com-ruby
+
+Para executá-lo (utiliza Rails 2.3.3 e SQLite):
+
+$ rake features
+
+Para executá-lo com Selenium, modificar o arquivo features/support/env.rb:
+
+1 - Comentar Cucumber::Rails.use_transactional_fixtures
+2 - Modificar config.mode = :rails para :selenium
+
+$ RAILS_ENV=selenium rake features
+
+* É necessário ter a gem selenium-client
